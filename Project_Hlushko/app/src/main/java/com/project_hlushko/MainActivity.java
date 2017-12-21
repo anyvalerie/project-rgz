@@ -2,6 +2,7 @@ package com.project_hlushko;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,11 +35,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btnDiv = (Button) findViewById(R.id.btnDiv);
 
         tvResult = (TextView) findViewById(R.id.tvResult);
-        
+        btnAdd.setOnClickListener(this);
+        btnSub.setOnClickListener(this);
+        btnMult.setOnClickListener(this);
+        btnDiv.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-
+        float num1 = 0;
+        float num2 = 0;
+        float result = 0;
+        if (TextUtils.isEmpty(etNum1.getText().toString())
+                || TextUtils.isEmpty(etNum2.getText().toString())) {
+            return;
+        }
     }
 }
