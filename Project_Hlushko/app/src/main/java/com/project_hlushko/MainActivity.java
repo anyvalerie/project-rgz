@@ -50,5 +50,27 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 || TextUtils.isEmpty(etNum2.getText().toString())) {
             return;
         }
+        num1 = Float.parseFloat(etNum1.getText().toString());
+        num2 = Float.parseFloat(etNum2.getText().toString());
+        switch (v.getId()) {
+            case R.id.btnAdd:
+                oper = "+";
+                result = num1 + num2;
+                break;
+            case R.id.btnSub:
+                oper = "-";
+                result = num1 - num2;
+                break;
+            case R.id.btnMult:
+                oper = "*";
+                result = num1 * num2;
+                break;
+            case R.id.btnDiv:
+                oper = "/";
+                result = num1 / num2;
+                break;
+            default:
+                break;
+        }
     }
 }
