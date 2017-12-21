@@ -25,6 +25,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        etNum1 = (EditText) findViewById(R.id.etNum1);
+        etNum2 = (EditText) findViewById(R.id.etNum2);
+
+        btnAdd = (Button) findViewById(R.id.btnAdd);
+        btnSub = (Button) findViewById(R.id.btnSub);
+        btnMult = (Button) findViewById(R.id.btnMult);
+        btnDiv = (Button) findViewById(R.id.btnDiv);
+
+        tvResult = (TextView) findViewById(R.id.tvResult);
+        
     }
 
     @Override
